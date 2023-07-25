@@ -1,0 +1,149 @@
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* VARIABLES */
+
+:root {
+  --clr-primary-700: hsl(215, 51%, 70%);
+  --clr-primary-500: hsl(178, 100%, 50%);
+
+  --clr-neutral-900: hsl(217, 54%, 11%);
+  --clr-neutral-700: hsl(216, 50%, 16%);
+  --clr-neutral-500: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-base: "Outfit", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+/* BASE STYLE */
+
+body {
+  font-family: var(--ff-base);
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-700);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD STYLE */
+
+.card {
+  max-width: 300px;
+  background-color: var(--clr-neutral-700);
+  overflow: hidden;
+  border-radius: 0.9rem;
+  padding: 1rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__header img {
+  border-radius: 0.6rem;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  transition: 300ms ease-in-out;
+}
+
+.img-overlay:hover {
+  opacity: 1;
+}
+
+.img-overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__content {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.card__title {
+  font-size: 1.3rem;
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+}
+
+.card__title:hover {
+  color: var(--clr-primary-500);
+}
+
+.card__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--clr-neutral-500);
+  padding-bottom: 1.2rem;
+}
+
+.card__ethereum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__ethereum .card__text {
+  color: var(--clr-primary-500);
+}
+
+.card__clock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__user {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.card__user img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 50%;
+}
+
+.card__text--white {
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+}
+
+.card__text--white:hover {
+  color: var(--clr-primary-500);
+}
